@@ -1,11 +1,12 @@
 
 body {
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    --columbia-blue: #bbdef0ff;
-    --light-sea-green: #00a6a6ff;
-    --yellow-munsell: #efca08ff;
+    --columbia-blue: #e8f7ff;
+    --light-sea-green: #ffbd9b;
+    --yellow-munsell: #ffd76d;
     --orange-web: #f49f0aff;
     --tangerine: #f08700ff;
+    --pale-white: #FFF5DA;
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
@@ -13,37 +14,82 @@ body {
     --footer-height: 25px;
     
     font-family: 'Lato', sans-serif;
-    background-color: var(--columbia-blue);
+    background-color: var(--pale-white);
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
     grid-gap: 30px 30px;
+    grid-auto-flow: row;
+    margin: 2em;
+    height: auto;
+    font-size: 16px;
 }
 
 header {
-    width: 400px;
-    height: 1em;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../DSC00862.jpg);
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-align: start;
     font-size: 24pt;
     font-weight: bold;
+    background-color: var(--orange-web);
 }
 
 h2 {
-    font-size: 18pt;
-    font-weight: bolder;
+    font-size: 2em;
+    font-weight: 900;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.content {
+    border: 3px solid var(--yellow-munsell);
+    background-color: var(--columbia-blue);
+    font-size: 1rem;
+
+}
+
+.dense-info {
+    padding: 25px;
 }
 
 .intro {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 3;
     grid-row: 1;
+    background-color: var(--light-sea-green);
+    border: 3px solid var(--tangerine);
+}
+
+.mugshot {
+    grid-column-start: 4;
+    grid-row-start: 1;
+
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+
 }
 
 .quick-facts {
     grid-column-start: 4;
     grid-row-start: 2;
+    width: 100%;
+}
+
+.fact-list {
+    list-style-type: square;
+    padding: 25px;
 }
 
 .about-me {
@@ -59,4 +105,19 @@ h2 {
 .activities {
     grid-column-start: 4;
     grid-row-start: 3;
+    width: 100%;
+}
+
+.activity-list {
+    padding: 25px;
+}
+
+.quiz {
+    grid-column: 2 / span 2;
+    grid-row-start: 4;
+}
+
+.grid-quiz {
+    display: flex;
+    flex-direction: column;   
 }
