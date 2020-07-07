@@ -43,5 +43,5 @@ quizButton.addEventListener('click', () => {
     //alerts user that the quiz is over and results to be posted on page
     alert('The quiz is completed! Results will be posted on the page!')
     // results get printed in the span element in html
-    quizResults.textContent = 'hello please throw me a bone';
+    quizResults.textContent = `Congratulations ${firstName} you have completed the quiz! Let us see how you did... You got ${score} out of 3.`;
 });

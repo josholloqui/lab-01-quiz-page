@@ -20,7 +20,7 @@ body {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-rows: .5fr 1fr 1fr 1fr;
     grid-gap: 30px 30px;
     grid-auto-flow: row;
     margin: 2em;
@@ -30,7 +30,7 @@ main {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     width: 100%;
     height: 100vh;
@@ -39,9 +39,12 @@ header {
     background-size: 100% auto;
     background-repeat: no-repeat;
     text-align: start;
-    font-size: 24pt;
+    font-size: 32pt;
     font-weight: bold;
     background-color: var(--orange-web);
+    font-family: 'Josefin Sans', sans-serif;
+    padding-left: 60px;
+    color: #474747;
 }
 
 h2 {
@@ -113,11 +116,31 @@ img {
 }
 
 .quiz {
-    grid-column: 2 / span 2;
+    grid-column: 1 / span 3;
     grid-row-start: 4;
 }
 
 .grid-quiz {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--light-sea-green);
+    border: 3px solid var(--tangerine);
+}
+
+button{
+    height: 100px;
+    width: 50%;
+    align-self: center;
+    border: 2px solid #474747;
+    border-radius: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #fcc429;
+    color: white;
+    font-size: 28px;
 }
