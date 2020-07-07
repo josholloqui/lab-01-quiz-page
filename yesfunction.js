@@ -3,4 +3,4 @@ export function translatesToYes(word) {
     const resultYes = firstLetter === 'y';
     //if it results in a yes then returns true
     return resultYes;
-};
+}
